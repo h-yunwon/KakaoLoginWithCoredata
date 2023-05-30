@@ -6,15 +6,30 @@
 //
 
 import SwiftUI
+import KakaoSDKCommon
+import KakaoSDKAuth
+
 
 @main
-struct KakaoLogInWithCoredataApp: App {
-    let persistenceController = PersistenceController.shared
+struct SwiftUI_testApp: App {
+
+    let kakaoNativeAppKey = Bundle.main.infoDictionary?["KAKAO_NATIVE_APP_KEY"] ?? ""
+    
+    init() {
+        // Kakao SDK 초기화
+        KakaoSDK.initSDK(appKey: kakaoNativeAppKey as! String)
+        
+        print("kakaoAppkey: \(kakaoNativeAppKey)")
+    }
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            // onOpenURL()을 사용해 커스텀 URL 스킴 처리
+            ContentView().onOpenURL(perform: { url in
+                if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                    AuthController.handleOpenUrl(url: url)
+                }
+            })
         }
     }
 }

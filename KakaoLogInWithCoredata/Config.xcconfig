@@ -1,0 +1,11 @@
+//
+//  Config.xcconfig
+//  KakaoLogInWithCoredata
+//
+//  Created by Yunwon Han on 2023/05/26.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+KAKAO_NATIVE_APP_KEY = e9088723f8513180652c958ba247d45d
