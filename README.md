@@ -2,6 +2,7 @@
 ### 카카오 API를 활용하여 간편한 로그인 기능을 구현하고, 로그인에 성공한 후에는 Core Data를 사용하여 사용자의 고유 아이디 값을 저장하고 뷰에 표시하는 기능을 제공합니다.
 
 ## 시현영상
+![KakaoLoginWithCoredata](https://github.com/h-yunwon/KakaoLoginWithCoredata/assets/134713788/38908a8c-ced3-4770-98b9-88239f94d1aa)
 
 ## 배운 점
 이 프로젝트를 통해 다음과 같은 것들을 배우게 되었습니다:
